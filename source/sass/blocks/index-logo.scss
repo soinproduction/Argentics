@@ -1,0 +1,33 @@
+.index-logo {
+  padding: clamp(20px, 2.604vw, 50px) 0;
+  background-color: $bg--c;
+}
+
+@media screen and (min-width: 1024px) {
+  .index-logo {
+
+    &__wrapper , &__slide {
+      width: initial;
+      height: initial;
+    }
+
+    &__slider {
+      overflow: initial;
+      max-width: 100%;
+    }
+
+    &__slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      grid-gap: clamp(30px, 5.104vw ,98px);
+      flex-wrap: wrap;
+    }
+  }
+}

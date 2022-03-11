@@ -1,0 +1,59 @@
+.index-first {
+  background-color: rgb(32, 39, 44);
+  background-image: url(../img/index-first.png);
+  background-size: cover;
+  background-position: top;
+  padding: clamp(120px, 11.927vw ,229px) 0 clamp(40px, 7.813vw,150px);
+  position: relative;
+  z-index: 0;
+
+  &:before {
+    width: 100%;
+    height: clamp(200px, 18.229vw ,350px);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(4, 13, 33, 0) 0%, #040D21 100%);
+    z-index: -1;
+  }
+
+  &__icon {
+    fill: transparent;
+  }
+
+  &__title {
+    max-width: 579px;
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: $text--w;
+    margin-bottom: clamp(30px,3.385vw ,65px);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    grid-gap: 50px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    grid-gap: 25px;
+  }
+
+  &__span {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: $text--w;
+  }
+}
