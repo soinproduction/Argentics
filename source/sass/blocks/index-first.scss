@@ -2,6 +2,7 @@
   background-color: rgb(32, 39, 44);
   background-image: url(../img/index-first.png);
   background-size: cover;
+  background-attachment: fixed;
   background-position: top;
   padding: clamp(120px, 11.927vw ,229px) 0 clamp(40px, 7.813vw,150px);
   position: relative;
@@ -24,11 +25,11 @@
   }
 
   &__title {
-    max-width: 579px;
+    max-width:579px;
     font-family: $font-family2;
     font-style: normal;
     font-weight: 700;
-    font-size: 55px;
+    font-size: clamp(40px, 5.865vw, 55px);
     line-height: 125%;
     text-transform: uppercase;
     color: $text--w;

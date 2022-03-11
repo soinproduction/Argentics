@@ -1,6 +1,29 @@
 .index-logo {
   padding: clamp(20px, 2.604vw, 50px) 0;
   background-color: $bg--c;
+
+  &__wrapper {
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  }
+
+  @media screen and (max-width: 1024px) {
+    &__slide {
+      max-width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__wrapper {
+      align-items: center;
+      overflow: initial;
+    }
+
+    .container {
+      padding: 0;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -26,7 +49,8 @@
     &__wrapper {
       display: flex;
       justify-content: center;
-      grid-gap: clamp(30px, 5.104vw ,98px);
+      justify-content: space-between;
+      grid-gap: 20px;
       flex-wrap: wrap;
     }
   }

@@ -19,30 +19,31 @@
     }
   };
   const enableSwiper = function () {
-    catalogBrandsSlider = new Swiper(".category-brands__box", {
-      slidesPerView: 5,
-      spaceBetween: 15,
-      speed: 6000,
+    catalogBrandsSlider = new Swiper(".index-logo__slider", {
+      slidesPerView: 'auto',
+      spaceBetween: 70,
+      loop: true,
+      speed: 8000,
       autoplay: {
-        delay: 3000,
+        delay: 0,
       },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        576: {
-          slidesPerView: 4,
-          spaceBetween: 15,
-        },
-        768: {
-          slidesPerView: 5,
-          spaceBetween: 15,
-        },
-      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      // },
+      // breakpoints: {
+      //   320: {
+      //     slidesPerView: 3,
+      //     spaceBetween: 10,
+      //   },
+      //   576: {
+      //     slidesPerView: 4,
+      //     spaceBetween: 15,
+      //   },
+      //   768: {
+      //     slidesPerView: 5,
+      //     spaceBetween: 15,
+      //   },
+      // },
     });
   };
 
@@ -123,24 +124,24 @@ let header = document.querySelector("header");
 const headerHeight = header.offsetHeight;
 const body = document.querySelector("main");
 
-console.log(document.documentElement.clientWidth)
+// console.log(document.documentElement.clientWidth)
 
-function autoPadding() {
-  const headerHeightResize = document.querySelector("header").offsetHeight
-  const body = document.querySelector("main");
+// function autoPadding() {
+//   const headerHeightResize = document.querySelector("header").offsetHeight
+//   const body = document.querySelector("main");
 
-  if (document.documentElement.clientWidth < 1050) {
-    body.style.paddingTop = headerHeightResize + 'px';
-  } else {
-    body.style.paddingTop = 0;
-  }
+//   if (document.documentElement.clientWidth < 1050) {
+//     body.style.paddingTop = headerHeightResize + 'px';
+//   } else {
+//     body.style.paddingTop = 0;
+//   }
 
-} autoPadding();
+// } autoPadding();
 
 
-window.addEventListener('resize', function() {
-  autoPadding();
-})
+// window.addEventListener('resize', function() {
+//   autoPadding();
+// })
 
 window.addEventListener("scroll", () => {
   let scrollTop = window.scrollY;
