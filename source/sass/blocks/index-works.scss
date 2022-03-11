@@ -1,0 +1,148 @@
+.index-works {
+  background-color: $bg--d;
+  padding: clamp(20px, 3.333vw, 40px) 0 clamp(20px, 3.333vw, 40px);
+
+  &__top {
+    margin-bottom: clamp(20px, 6.667vw, 80px);
+  }
+
+  .grid-layout {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(15px, 2.5vw, 30px);
+  }
+
+  .first-row {
+    position: relative;
+    z-index: 1;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      grid-gap: clamp(15px, 2.5vw, 30px);
+      grid-template-areas:
+      "a b c f"
+      "a e e f";
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "b c"
+        "e e"
+        "a f";
+      }
+    }
+
+    .grid-layout__row-coll {
+      display: flex;
+      position: relative;
+
+      .grid-layout__bg {
+        display: flex;
+        width: 100%;
+        img, picture {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &:nth-child(1) {
+        grid-area: a;
+        position: relative;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+          width: Min(22.583vw, 271px);
+          height: Min(54.333vw, 652px);
+          left: -20%;
+          top: -17%;
+        }
+      }
+
+      &:nth-child(2) {
+        grid-area: b;
+      }
+
+      &:nth-child(3) {
+        grid-area: c;
+      }
+
+      &:nth-child(4) {
+        grid-area: e;
+      }
+
+      &:nth-child(5) {
+        grid-area: f;
+        position: relative;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+          width: Min(38.417vw, 461px);
+          height: Min(65.833vw, 790px);
+          left: -40%;
+          top: -19%;
+        }
+      }
+    }
+  }
+
+  .second-row {
+    position: relative;
+    z-index: 2;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: clamp(15px, 2.5vw, 30px);
+      grid-template-areas:
+      "a b c d";
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "a b"
+        "c d";
+      }
+    }
+
+    .grid-layout__row-coll {
+      display: flex;
+      position: relative;
+
+      .grid-layout__bg {
+        display: flex;
+        width: 100%;
+        img, picture {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &:nth-child(1) {
+        grid-area: a;
+      }
+
+      &:nth-child(2) {
+        grid-area: b;
+      }
+
+      &:nth-child(3) {
+        grid-area: c;
+        position: relative;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+          bottom: 0;
+        }
+      }
+
+      &:nth-child(4) {
+        grid-area: d;
+      }
+    }
+  }
+}

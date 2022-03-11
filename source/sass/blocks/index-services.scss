@@ -1,5 +1,96 @@
 .index-services {
-  height: 1500px;
   background-color: $bg--d;
-  padding: clamp(30px, 4.583vw, 88px) 0 clamp(20px, 2.083vw, 40px);
+  padding: clamp(30px, 7.33vw, 88px) 0 clamp(20px, 3.333vw, 40px);
+
+  &__box {
+    padding: clamp(20px, 8.333vw,100px) clamp(20px,6.667vw, 80px);
+    background: rgba(38, 56, 94, 0.4);
+    border-radius: 10px;
+    grid-gap: Min(2.5vw, 30px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__top {
+    margin-bottom: clamp(20px, 5vw,60px);
+  }
+
+  &__image {
+    margin-left: -15%;
+    width: Min(28vw, 336px);
+    animation: services-hero 10s infinite linear;
+    position: absolute;
+
+    @media screen and (max-width: 1360px) {
+      margin-left: -10%;
+    }
+  }
+
+  &__list {
+    margin-left: auto;
+    width: Min(62.917vw, 755px);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: Min(6.417vw,77px) Min(5.25vw, 63px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: clamp(5px, 0.417vw, 10px);
+
+    svg {
+      min-height: 50px;
+    }
+
+    &:not(:nth-of-type(3n)) {
+      .index-services__text::before {
+          content: '';
+          width: 1px;
+          position: absolute;
+          right: calc(Max(-5.25vw, -63px) / 2);
+          transform: translateX(-50%);
+          bottom: -30px;
+          top: 0;
+          background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    @media screen and (max-width: 1145px) {
+      &:not(:nth-of-type(3n)) {
+        .index-services__text::before {
+            display: none;
+        }
+      }
+
+      .index-services__title br {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-family4;
+    text-transform: uppercase;
+    max-width: 85%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: $text--w;
+
+  }
+
+  &__text {
+    position: relative;
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: $text--w;
+    flex-grow: 1;
+  }
 }
