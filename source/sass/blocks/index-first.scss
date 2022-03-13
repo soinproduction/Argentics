@@ -1,12 +1,17 @@
 .index-first {
   background-color: rgb(32, 39, 44);
   background-image: url(../img/index-first.png);
-  background-size: cover;
+  background-size: 125%;
   background-attachment: fixed;
   background-position: top;
   padding: clamp(120px, 11.927vw ,229px) 0 clamp(40px, 7.813vw,150px);
   position: relative;
   z-index: 0;
+
+  @media screen and (max-width: 1024px) {
+    background-size: 150%;
+    background-position: top;
+  }
 
   &:before {
     width: 100%;

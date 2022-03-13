@@ -137,11 +137,134 @@
           position: absolute;
           display: flex;
           bottom: 0;
+          right: -7%;
+          width: Min(24.667vw, 296px);
+          height: Min(30.333vw, 364px);
         }
       }
 
       &:nth-child(4) {
         grid-area: d;
+      }
+    }
+  }
+
+  .third-row {
+    position: relative;
+    z-index: 2;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: clamp(15px, 2.5vw, 30px);
+      grid-template-areas:
+      "a b b d"
+      "a c c e";
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "a b"
+        "c d";
+      }
+    }
+
+    .grid-layout__row-coll {
+      display: flex;
+      position: relative;
+
+      .grid-layout__bg {
+        display: flex;
+        width: 100%;
+        img, picture {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &:nth-child(1) {
+        grid-area: a;
+        position: relative;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+          bottom: -2%;
+          left: -2%;
+          width: Min(22.667vw, 272px);
+          height: Min(48.667vw, 584px);
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        grid-area: b;
+      }
+
+      &:nth-child(3) {
+        grid-area: c;
+        position: relative;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+          bottom: 0;
+          right: -7%;
+          width: Min(24.667vw, 296px);
+          height: Min(30.333vw, 364px);
+        }
+      }
+
+      &:nth-child(4) {
+        grid-area: d;
+        position: relative;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+          bottom: 0;
+          left: -5%;
+          width: Min(34.417vw, 413px);
+          height: Min(22.083vw, 265px);
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        grid-area: e;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+          &--dragon {
+            bottom: 0;
+            right: 0;
+            width: Min(31.667vw, 380px);
+            height: Min(33.333vw, 400px);
+          }
+
+          &--fire {
+            bottom: -27%;
+            left: -16%;
+            width: Min(15vw, 180px);
+            height: Min(11vw, 132px);
+            animation: fire-pulse 4s infinite;
+          }
+        }
       }
     }
   }

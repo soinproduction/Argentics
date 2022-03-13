@@ -1,0 +1,60 @@
+.about-us {
+  padding-top: clamp(30px, 11.833vw,142px);
+  padding-bottom: clamp(20px, 10vw, 120px);
+  position: relative;
+  background-image: url(../img/about-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+  &::before {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(4, 13, 33, 0) 0%, #040D21 100%);
+    height: Min(42.833vw, 514px);
+    content: '';
+    bottom: 0;
+    left: 0;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: Min(40.917vw, 491px) Min(46.667vw, 560px);
+    justify-content: space-between;
+    grid-auto-flow: dense;
+    align-items: center;
+    grid-gap: 25px;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $font-family2;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    color: $text--w;
+    margin-bottom: clamp(20px, 3.75vw, 45px);
+  }
+
+  &__text {
+    font-family: $font-family4;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $text--w;
+
+    & + & {
+      margin-top: clamp(15px, 2.5vw, 30px);
+    }
+  }
+
+}

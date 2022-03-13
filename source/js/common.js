@@ -51,6 +51,55 @@
   breakpointChecker();
 })();
 
+(function () {
+  "use strict";
+
+  const breakpoint = window.matchMedia("(min-width:1024px)");
+  let catalogBrandsSlider;
+
+  const breakpointChecker = function () {
+    if (breakpoint.matches === true) {
+      if (catalogBrandsSlider !== undefined)
+        catalogBrandsSlider.destroy(true, true);
+
+      return;
+    } else if (breakpoint.matches === false) {
+      return enableSwiper();
+    }
+  };
+  const enableSwiper = function () {
+    catalogBrandsSlider = new Swiper(".partners-logo__slider", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      loop: true,
+      speed: 8000,
+      autoplay: {
+        delay: 0,
+      },
+      // pagination: {
+      //   el: ".swiper-pagination",
+      // },
+      // breakpoints: {
+      //   320: {
+      //     slidesPerView: 3,
+      //     spaceBetween: 10,
+      //   },
+      //   576: {
+      //     slidesPerView: 4,
+      //     spaceBetween: 15,
+      //   },
+      //   768: {
+      //     slidesPerView: 5,
+      //     spaceBetween: 15,
+      //   },
+      // },
+    });
+  };
+
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
+})();
+
 // init sliders
 
 // tabs

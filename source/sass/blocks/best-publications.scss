@@ -1,0 +1,72 @@
+.best-publications {
+  padding-top: clamp(40px, 11.417vw, 137px);
+  padding-bottom: clamp(150px, 33.083vw, 397px);
+  background-color: $bg--d;
+
+  &__top {
+    margin-bottom: clamp(20px, 3.333vw, 40px);
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(15px, 2.5vw, 30px);
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    background: rgba(196, 196, 196, 0.1);
+    border-radius: 10px;
+    padding: clamp(10px, 1.667vw, 20px) clamp(10px, 2.25vw, 27px);
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &__image {
+    width: Min(40.417vw, 388px);
+    height: Min(31.667vw, 304px);
+  }
+
+  &__article {
+    width: Min(49.917vw, 480px);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__date {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: clamp(15px,3.646vw, 35px);
+  }
+
+  &__title {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(20px,4.375vw,42px);
+    line-height: 115%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: clamp(15px, 2.604vw ,25px);
+  }
+
+  &__text {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(15px, 1.771vw ,17px);
+    line-height: 165%;
+    color: rgba(255, 255, 255, 0.6);
+    flex-grow: 1;
+  }
+}
