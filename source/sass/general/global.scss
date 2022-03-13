@@ -84,6 +84,11 @@ picture {
 input {
   width: 100%;
   outline: none;
+  border: none;
+}
+
+label {
+  display: block;
 }
 
 input::-webkit-outer-spin-button,

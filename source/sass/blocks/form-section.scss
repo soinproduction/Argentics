@@ -1,0 +1,124 @@
+.form-section {
+  background-color: $bg--w;
+  padding-top: clamp(30px, 13.917vw, 167px);
+  padding-bottom: clamp(30px, 10.583vw,127px);
+
+  &__top {
+    margin-bottom: clamp(40px, 3.75vw, 45px);
+  }
+
+  &__title {
+    color: $text--a;
+  }
+
+  &__text {
+    color: $text--a;
+    line-height: 165%;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "a b"
+    "c c"
+    "d d";
+    grid-gap: clamp(25px,5.417vw,65px) clamp(15px,3.083vw,37px);
+  }
+
+  &__fieldset {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    input {
+      border-bottom: 1px solid rgba(4, 13, 33, 0.3);
+      padding-bottom: clamp(5px, 1.25vw, 15px);
+      transition: all .4s;
+      font-family: 'PT Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: clamp(14px, 1.667vw, 20px);
+      line-height: 100%;
+      color: #040D21;
+
+
+      &::placeholder {
+        font-family: 'PT Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1.667vw, 20px);
+        line-height: 100%;
+        color: $text--a;
+        opacity: 0.5;
+        transition: all .4s;
+      }
+
+      &:focus {
+        border-bottom: 2px solid rgba(4, 13, 33, 1);
+
+        &::placeholder {
+          opacity: 1;
+          font-weight: 700;
+        }
+      }
+
+      &:valid {
+        border-bottom: 2px solid rgba(4, 13, 33, 1);
+      }
+    }
+
+    &--name {
+      grid-area: a;
+    }
+
+    &--email {
+      grid-area: b;
+    }
+
+    &--message {
+      grid-area: c;
+    }
+  }
+
+  &__button {
+    grid-area: d;
+    height: clamp(35px, 5vw,60px);
+    width: clamp(100px,14.167vw,170px);
+    background: #3BA34C;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(16px,2vw,24px);
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    transition: all .6s;
+
+    &:hover {
+      box-shadow: 12px 13px 16px 7px rgba(53, 86, 58, 0.2);
+      transform: scale(1.08);
+      background: #4ed364;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__form {
+      max-width: 80%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+      "a a"
+      "b b"
+      "c c"
+      "d d";
+      grid-gap: 40px;
+    }
+  }
+}
