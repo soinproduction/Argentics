@@ -1,0 +1,31 @@
+.main-approach {
+  background-color: $bg--d;
+  padding-top: clamp(20px, 12.5vw,150px);
+  padding-bottom: clamp(60px, 25vw, 300px);
+  background-image: url(../../img/approach_bg.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    width: 100%;
+    height: Min(29.167vw, 350px);
+    position: absolute;
+    content: '';
+    background: linear-gradient(180deg, #040D21 0%, rgba(4, 13, 33, 0) 100%);
+    top: 5%;
+    z-index: -1;
+  }
+
+  &::after {
+    width: 100%;
+    height: Min(29.167vw, 350px);
+    position: absolute;
+    content: '';
+    background: linear-gradient(180deg, rgba(4, 13, 33, 0) 0%, #040D21 100%);
+    bottom: 5%;
+    z-index: -1;
+  }
+}

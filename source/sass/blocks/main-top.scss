@@ -16,14 +16,20 @@
     color: $text--w;
   }
 
+  &__green {
+    color: $text--e;
+  }
+
   &__text {
     font-family: $font-family4;
     font-size: clamp(16px,1.667vw,20px);
     font-style: normal;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 167%;
     letter-spacing: 0em;
     text-align: center;
     color: $text--w;
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }

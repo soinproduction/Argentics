@@ -1,0 +1,10 @@
+.art2D-first {
+  background-image: url(../img/2D_bg.png);
+
+  &__image {
+    width: Min(48.5vw, 582px);
+    height: Min(52.75vw, 633px);
+    top: 50%;
+    transform: translateY(-45%);
+  }
+}

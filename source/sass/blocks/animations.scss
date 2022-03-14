@@ -27,3 +27,51 @@
   }
 
 }
+
+@keyframes wave {
+  0% {
+    left: 0;
+  }
+
+  25% {
+    left: -25%;
+    right: -25%;
+  }
+
+  50% {
+    left: -100%;
+    right: 0;
+  }
+
+  75% {
+    left: -25%;
+    right: -25%;
+  }
+
+  100% {
+    left: 0;
+    right: 0;
+  }
+}
+
+@keyframes section-image {
+  0% {
+    transform: translateX(0%) translateY(-50%);
+  }
+
+  25% {
+    transform: translateX(-10%) translateY(-47%) scale(1.08);
+  }
+
+  50% {
+    transform: translateX(-0%) translateY(-45%);
+  }
+
+  75% {
+    transform: translateX(-10%) translateY(-47%) scale(.92);
+  }
+
+  100% {
+    transform: translateX(0%) translateY(-50%);
+  }
+}
