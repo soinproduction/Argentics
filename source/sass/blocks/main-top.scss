@@ -32,4 +32,11 @@
     max-width: 1000px;
     margin: 0 auto;
   }
+
+  &--dark {
+    .main-top__title,
+    .main-top__text {
+      color: $text--a;
+    }
+  }
 }

@@ -6,12 +6,12 @@
   "use strict";
 
   const breakpoint = window.matchMedia("(min-width:1024px)");
-  let catalogBrandsSlider;
+  let slider;
 
   const breakpointChecker = function () {
     if (breakpoint.matches === true) {
-      if (catalogBrandsSlider !== undefined)
-        catalogBrandsSlider.destroy(true, true);
+      if (slider !== undefined)
+      slider.destroy(true, true);
 
       return;
     } else if (breakpoint.matches === false) {
@@ -19,7 +19,7 @@
     }
   };
   const enableSwiper = function () {
-    catalogBrandsSlider = new Swiper(".index-logo__slider", {
+    slider = new Swiper(".index-logo__slider", {
       slidesPerView: 'auto',
       spaceBetween: 70,
       loop: true,
@@ -55,12 +55,12 @@
   "use strict";
 
   const breakpoint = window.matchMedia("(min-width:1024px)");
-  let catalogBrandsSlider;
+  let slider;
 
   const breakpointChecker = function () {
     if (breakpoint.matches === true) {
-      if (catalogBrandsSlider !== undefined)
-        catalogBrandsSlider.destroy(true, true);
+      if (slider !== undefined)
+        slider.destroy(true, true);
 
       return;
     } else if (breakpoint.matches === false) {
@@ -68,7 +68,7 @@
     }
   };
   const enableSwiper = function () {
-    catalogBrandsSlider = new Swiper(".partners-logo__slider", {
+    slider = new Swiper(".partners-logo__slider", {
       slidesPerView: 4,
       spaceBetween: 30,
       loop: true,
@@ -94,6 +94,56 @@
       //   },
       // },
     });
+  };
+
+  breakpoint.addListener(breakpointChecker);
+  breakpointChecker();
+})();
+
+(function () { // technical slider
+  "use strict";
+
+  const breakpoint = window.matchMedia("(min-width:1024px)");
+  let slider;
+
+  const breakpointChecker = function () {
+    if (breakpoint.matches === true) {
+      if (slider !== undefined)
+      slider.destroy(true, true);
+
+      return;
+    } else if (breakpoint.matches === false) {
+      return enableSwiper();
+    }
+  };
+  const enableSwiper = function () {
+    slider = new Swiper(".technical__slider", {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    speed: 8000,
+    autoplay: {
+      delay: 0,
+    },
+    // pagination: {
+    //   el: ".swiper-pagination",
+    // },
+    // breakpoints: {
+    //   320: {
+    //     slidesPerView: 3,
+    //     spaceBetween: 10,
+    //   },
+    //   576: {
+    //     slidesPerView: 4,
+    //     spaceBetween: 15,
+    //   },
+    //   768: {
+    //     slidesPerView: 5,
+    //     spaceBetween: 15,
+    //   },
+    // },
+  });
   };
 
   breakpoint.addListener(breakpointChecker);

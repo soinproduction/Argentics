@@ -79,8 +79,7 @@
 .main-second {
   background-color: $bg--d;
   position: relative;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  z-index: 3;
 
   &::before {
     width: 200vw;
