@@ -1,0 +1,21 @@
+.art3D-first {
+  background-image: url(../img/3D_bg.png);
+  background-position: top right;
+
+  &__box {
+    z-index: initial;
+  }
+
+  &__image {
+    width: Min(46.667vw, 560px);
+    height: Min(46.833vw, 562px);
+    top: 50%;
+    transform: translateY(-45%);
+    z-index: 0;
+  }
+
+  &__article {
+    position: relative;
+    z-index: 5;
+  }
+}

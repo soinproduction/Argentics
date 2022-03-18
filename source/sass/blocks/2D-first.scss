@@ -1,5 +1,10 @@
 .art2D-first {
   background-image: url(../img/2D_bg.png);
+  background-position: top right;
+
+  &__box {
+    z-index: 10;
+  }
 
   &__image {
     width: Min(48.5vw, 582px);

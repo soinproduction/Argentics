@@ -1,0 +1,17 @@
+.gameDev-first {
+  background-image: url(../img/game_bg.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  &__box {
+    z-index: 10;
+  }
+
+  &__image {
+    width: Min(46.25vw, 555px);
+    height: Min(48.667vw, 584px);
+    top: 75%;
+    transform: translateY(-45%);
+  }
+}

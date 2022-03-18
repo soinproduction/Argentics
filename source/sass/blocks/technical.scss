@@ -18,6 +18,11 @@
 
   &__image {
     margin-bottom: 10px;
+
+    img,picture {
+      max-height:56px;
+      object-fit: contain;
+    }
   }
 
   &__slider {

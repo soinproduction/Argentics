@@ -10,6 +10,14 @@
   position: relative;
   z-index: 0;
 
+  &--character {
+    background-image: url(../img/list-sec-bg2.png);
+  }
+
+  &--3D_Art {
+    background-image: url(../img/list-sec-bg3.png);
+  }
+
   &:before {
     width: 100%;
     height: clamp(200px, 18.229vw ,350px);
@@ -66,10 +74,11 @@
     margin-bottom: clamp(15px, 1.667vw,20px);
     line-height: 125%;
     color: $text--a;
-
+    display: flex;
 
     span {
       color: $text--e;
+      margin-right: 5px;
     }
   }
 

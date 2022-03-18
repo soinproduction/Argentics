@@ -1,0 +1,116 @@
+.art2D-works {
+  padding-top: clamp(30px, 5.833vw, 70px);
+  padding-bottom: clamp(100px, 33.333vw,400px);
+  background-color: $bg--d;
+
+  &__top {
+    margin-bottom: clamp(35px,5.833vw,70px);
+  }
+
+  .grid-layout {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(15px, 2.5vw, 30px);
+  }
+
+  .first-row {
+    position: relative;
+    z-index: 1;
+
+    img {
+      height: initial;
+      width: 100%;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      grid-gap: clamp(15px, 2.5vw, 30px);
+      grid-template-areas:
+      "a b c d"
+      "a e e f";
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "a d"
+        "a b"
+        "c f"
+        "e e";
+      }
+    }
+
+    .grid-layout__row-coll {
+      display: flex;
+      position: relative;
+
+      .grid-layout__bg {
+        display: flex;
+        width: 100%;
+        img, picture {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &:nth-child(1) {
+        grid-area: a;
+        position: relative;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+          width: Min(5.333vw, 64px);
+          height: Min(7.5vw, 90px);
+          left: 36%;
+          top: -8%;
+
+          @media screen and (max-width: 768px) {
+            width: Min(8.333vw, 64px);
+            height: Min(11.719vw, 90px);
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        grid-area: b;
+      }
+
+      &:nth-child(3) {
+        grid-area: c;
+      }
+
+      &:nth-child(4) {
+        grid-area: e;
+        position: relative;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+          width: Min(52.167vw, 626px);
+          height: Min(29.417vw, 353px);
+          left: 0;
+          bottom: -21%;
+        }
+      }
+
+      &:nth-child(5) {
+        grid-area: f;
+      }
+
+      &:nth-child(6) {
+        grid-area: d;
+
+        .grid-layout__hero {
+          position: absolute;
+          display: flex;
+          width: Min(24.167vw, 290px);
+          height: Min(28.333vw, 340px);
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

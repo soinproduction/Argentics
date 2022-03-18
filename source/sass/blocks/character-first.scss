@@ -1,0 +1,22 @@
+.character-first {
+  background-image: url(../img/character_bg.png);
+  background-position: top right;
+  background-size: cover;
+  padding-bottom: Min(8.333vw, 100px);
+
+  &__box {
+    z-index: initial;
+  }
+
+  &__image {
+    width: Min(43.333vw, 520px);
+    height: Min(52.083vw, 625px);
+    bottom: Max(-1.667vw, -20px);
+    z-index: 0;
+  }
+
+  &__article {
+    position: relative;
+    z-index: 5;
+  }
+}
