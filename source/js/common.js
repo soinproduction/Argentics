@@ -203,10 +203,18 @@
 let acc = document.querySelectorAll(".accordion");
 let i;
 
+
+
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
+  acc[0].click()
+  acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     let panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
   });
 }
 // acoordion
@@ -258,3 +266,32 @@ window.addEventListener("scroll", () => {
 //   let scrollTop = body.scrollTop;
 
 // });
+
+lightGallery(document.getElementById('portfolioGallery'),{
+  // subHtmlSelectorRelative: true,
+  // addClass: 'fixed-size',
+  // appendSubHtmlTo: '.lg-empty-html'
+});
+
+let moreBtn = document.querySelector('.veiw-more');
+let moreLists = [...document.querySelectorAll('.portfolio-gallery__list')];
+let secondClick = false;
+
+if (moreBtn) {
+  moreBtn.addEventListener('click', function(e){
+    e.preventDefault()
+    if (secondClick) {
+      moreBtn.innerHTML = 'More Works';
+      for (const moreList of moreLists) {
+        moreList.style.maxHeight = null;
+      }
+      secondClick = false;
+    } else {
+      moreBtn.innerHTML = 'roll up';
+      for (const moreList of moreLists) {
+        moreList.style.maxHeight = moreList.scrollHeight + "px";
+      }
+      secondClick = true;
+    };
+  });
+}

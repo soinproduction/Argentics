@@ -1,0 +1,72 @@
+.vr-second {
+  &__top {
+    margin-bottom: clamp(35px,7.5vw,90px);
+  }
+
+}
+
+.vr-list {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(15px, 2.5vw,30px);
+
+  &__item {
+    padding-top: clamp(20px,5.833vw,70px);
+    padding-left: clamp(25px,8.333vw,100px);
+    padding-right: clamp(25px,8.333vw,100px);
+    padding-bottom: clamp(20px,8.333vw,100px);
+    background: #121E39;
+    border-radius: 10px;
+  }
+
+  &__top {
+    margin-bottom: clamp(15px, 3.333vw, 40px);
+  }
+}
+
+.vr-sublist {
+  display: flex;
+  flex-direction: column;
+  grid-gap: clamp(10px, 1.667vw, 20px);
+
+  &__icon {
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: clamp(30px, 4.417vw,53px);
+    height: clamp(30px, 4.417vw,53px);
+    fill: transparent;
+  }
+
+  &__item {
+    background-color: $bg--w;
+    border-radius: 15px;
+    padding-top: clamp(15px,2.167vw,26px);
+    padding-left: clamp(25px,5.25vw,63px);
+    padding-right: clamp(25px,5.25vw,63px);
+    padding-bottom: clamp(15px,2.5vw,30px);
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(10px, 1.667vw, 20px) 0;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    grid-gap: 0 clamp(10px, 1.25vw,15px);
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(18px, 2vw,24px);
+    line-height: 117%;
+    color: $text--a;
+  }
+
+  &__text {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(14px, 1.417vw, 17px);
+    line-height: 165%;
+    color: $text--a;
+  }
+}

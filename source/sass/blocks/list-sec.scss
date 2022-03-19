@@ -18,6 +18,14 @@
     background-image: url(../img/list-sec-bg3.png);
   }
 
+  &--game {
+    background-image: url(../img/list-sec-bg4.png);
+  }
+
+  &--vr {
+    background-image: url(../img/list-sec-bg5.png);
+  }
+
   &:before {
     width: 100%;
     height: clamp(200px, 18.229vw ,350px);
@@ -52,19 +60,38 @@
     @media screen and (max-width: 767px) {
       grid-template-columns: repeat(1, 1fr);
     }
-  }
 
-  &__item {
-    min-height: Min(35.5vw, 426px);
-
-    @media screen and (max-width: 992px) {
-      min-height: Min(16.667vw, 200px);
-    }
-
-    @media screen and (max-width: 767px) {
-      min-height: initial;
+    &--vr {
+      position: relative;
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 33%;
     }
   }
+
+
+  &__image {
+    position: absolute;
+    width: Min(40.833vw, 490px);
+    height: Min(68vw, 816px);
+    left: Max(-11.25vw,-134px);
+    bottom: Max(-5.583vw,-67px);
+
+    img, picture {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  // &__item {
+  //   min-height: Min(35.5vw, 426px);
+
+  //   @media screen and (max-width: 992px) {
+  //     min-height: Min(16.667vw, 200px);
+  //   }
+
+  //   @media screen and (max-width: 767px) {
+  //     min-height: initial;
+  //   }
+  // }
 
   &__title {
     font-family: $font-family2;
@@ -89,5 +116,43 @@
     font-weight: 400;
     line-height: 150%;
     color: $text--a;
+  }
+
+  &__bottom {
+    margin-top: clamp(20px, 3.333vw, 40px);
+    border-top: 1px solid rgba(99, 101, 105, 0.5 );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__more {
+    margin-top: clamp(20px, 2.5vw, 30px);
+    margin-left: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    grid-gap: 18px;
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: $text--a;
+
+    &.active {
+      margin-bottom: clamp(20px, 2.5vw, 30px);
+
+      .arrow-icon {
+        transform: scaleY(-1);
+      }
+    }
+
+    .arrow-icon {
+      width: clamp(20px, 2vw,24px);
+      height: clamp(20px, 2vw,24px);
+      transition: all .4s;
+    }
   }
 }

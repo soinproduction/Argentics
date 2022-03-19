@@ -1,0 +1,97 @@
+.gameDev-service {
+  background-color: $bg--w;
+  padding-top: clamp(40px,13.833vw, 166px);
+  padding-bottom: clamp(25px, 6.25vw, 75px);
+
+  &__top {
+    margin-bottom: clamp(35px,5.417vw,65px);
+  }
+
+  &__box {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(10px, 1.25vw,15px);
+  }
+
+  &__item {
+    background: rgba(244, 244, 244, 0.5);
+    border: 1px solid rgba(99, 101, 105, 0.5);
+    border-radius: 10px;
+    padding: clamp(15px, 2.917vw,35px)
+             clamp(10px, 2.75vw,33px);
+  }
+
+  &__header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 20px;
+
+    &.active {
+      .gameDev-service__icon {
+        transform: scaleY(-1);
+      }
+      .gameDev-service__icon::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    color: $text--e;
+  }
+
+  &__icon {
+    width: clamp(20px, 2vw,24px);
+    height: clamp(20px, 2vw,24px);
+    transition: all .4s;
+    background: $bg--f;
+    border-radius: 3px;
+    position: relative;
+    flex-shrink: 0;
+
+    &::before {
+      opacity: 1;
+      width: 2.5px;
+      height: 60%;
+      content: '';
+      position: absolute;
+      background-color: $bg--w;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all .4s;
+
+    }
+
+    &::after {
+      height: 2.5px;
+      width: 60%;
+      content: '';
+      position: absolute;
+      background-color: $bg--w;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__text {
+    padding-top: clamp(15px, 2.917vw,35px);
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $text--a;
+    max-width: 740px;
+  }
+}

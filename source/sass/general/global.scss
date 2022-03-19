@@ -195,5 +195,35 @@ input[type="number"] {
 }
 
 
+.mini-image {
+  width: Min(23.083vw,277px);
+  height: Min(22.417vw, 270px);
+
+  .grid-layout__bg img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.vertical-image {
+  width: Min(23.083vw,277px);
+  height: Min(47.083vw, 565px);
+
+  .grid-layout__bg img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.horizontal-image {
+  width: Min(48.25vw, 580px);
+  height: Min(22.417vw, 270px);
+
+  .grid-layout__bg img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
 

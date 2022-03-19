@@ -1,0 +1,18 @@
+.vr-first {
+  background-image: url(../img/vr_bg.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-attachment: scroll;
+
+  &__box {
+    z-index: 10;
+  }
+
+  &__image {
+    width: Min(30.667vw, 368px);
+    height: Min(43.833vw, 526px);
+    top: 75%;
+    transform: translateY(-45%);
+  }
+}

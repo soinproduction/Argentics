@@ -1,0 +1,52 @@
+.portfolio-first {
+  background-image: url(../img/portfolio_bg.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  padding-bottom: clamp(80px, 11.917vw, 143px);
+  z-index: 0;
+
+  &__box {
+    z-index: 10;
+  }
+
+  &__image {
+    width: Min(39.833vw, 478px);
+    height: Min(51vw, 612px);
+    right: -5%;
+    top: 100%;
+    transform: translateY(-72%);
+  }
+
+  &__list {
+    margin-top: clamp(15px, 2.083vw, 20px);
+    display: flex;
+    align-items: flex-start;
+    grid-gap: clamp(20px, 4.167vw,50px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+  }
+
+  &__info {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: $text--w;
+  }
+
+  &__value {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $text--w;
+  }
+}

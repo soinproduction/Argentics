@@ -9,9 +9,10 @@
   }
 
   &__image {
-    width: Min(46.25vw, 555px);
-    height: Min(48.667vw, 584px);
+    width: Min(40.667vw, 488px);
+    height: Min(48.667vw, 581px);
     top: 75%;
+    right: -5%;
     transform: translateY(-45%);
   }
 }

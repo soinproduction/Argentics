@@ -14,7 +14,6 @@
 
   .first-row {
     position: relative;
-    z-index: 1;
 
     &__list {
       display: grid;
@@ -24,14 +23,6 @@
       grid-template-areas:
       "a b c f"
       "a e e f";
-
-      @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-        "b c"
-        "e e"
-        "a f";
-      }
     }
 
     .grid-layout__row-coll {
@@ -76,6 +67,7 @@
       &:nth-child(5) {
         grid-area: f;
         position: relative;
+        z-index: 1;
 
         .grid-layout__hero {
           position: absolute;
@@ -99,13 +91,6 @@
       grid-gap: clamp(15px, 2.5vw, 30px);
       grid-template-areas:
       "a b c d";
-
-      @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-        "a b"
-        "c d";
-      }
     }
 
     .grid-layout__row-coll {
@@ -160,13 +145,6 @@
       grid-template-areas:
       "a b b d"
       "a c c e";
-
-      @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-        "a b"
-        "c d";
-      }
     }
 
     .grid-layout__row-coll {
