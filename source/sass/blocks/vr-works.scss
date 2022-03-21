@@ -4,7 +4,7 @@
   background-color: $bg--d;
 
   &__top {
-    margin-bottom: clamp(35px,5.833vw,70px);
+    margin-bottom: clamp(60px,5.833vw,70px);
   }
 
   .grid-layout {
@@ -157,9 +157,9 @@
           left: -12%;
           top: 22%;
 
-          @media screen and (max-width: 1240px) {
-            left: 0;
-          }
+          // @media screen and (max-width: 1240px) {
+          //   left: 0;
+          // }
         }
       }
 
@@ -216,9 +216,9 @@
           left: -9%;
           top: 18%;
 
-          @media screen and (max-width: 1240px) {
-            left: 0;
-          }
+          // @media screen and (max-width: 1240px) {
+          //   left: 0;
+          // }
         }
       }
 

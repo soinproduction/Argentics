@@ -99,6 +99,7 @@
   left: 50%;
   height: 0;
   transform: translate(-50%, 30px) scaleY(0);
+  z-index: 20;
 
   &::before {
     width: 100%;
