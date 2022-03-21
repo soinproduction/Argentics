@@ -16,6 +16,16 @@
     right: -5%;
     top: 100%;
     transform: translateY(-72%);
+    display: flex;
+
+    @media screen and (max-width: 767px) {
+      width: 232px;
+      height: 298px;
+    }
+
+    @media screen and (max-width: 400px) {
+      transform: translate( 20%,-70%);
+    }
   }
 
   &__list {

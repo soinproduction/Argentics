@@ -28,4 +28,38 @@
     background: linear-gradient(180deg, rgba(4, 13, 33, 0) 0%, #040D21 100%);
     z-index: -1;
   }
+
+  @media screen and (max-width: 767px) {
+    &__article {
+      max-width: 60%;
+    }
+
+    &__image {
+      transform: translate(15%,-40%);
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    padding-bottom: 35px;
+
+    &__article {
+      max-width: 100%;
+    }
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 20px;
+    }
+
+    &__image {
+      transform: none;
+      position: initial;
+      width: 80%;
+      margin: 0 auto;
+      height: auto;
+      object-fit: contain;
+    }
+
+  }
 }

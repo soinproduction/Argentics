@@ -10,7 +10,7 @@
   .grid-layout {
     display: flex;
     flex-direction: column;
-    grid-gap: clamp(15px, 2.5vw, 30px);
+    grid-gap: clamp(5px, 2.5vw, 30px);
   }
 
   .first-row {
@@ -26,19 +26,10 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
-      grid-gap: clamp(15px, 2.5vw, 30px);
+      grid-gap: clamp(5px, 2.5vw, 30px);
       grid-template-areas:
       "a b c d"
       "a e e f";
-
-      @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-        "a d"
-        "a b"
-        "c f"
-        "e e";
-      }
     }
 
     .grid-layout__row-coll {
@@ -65,11 +56,6 @@
           height: Min(7.5vw, 90px);
           left: 36%;
           top: -8%;
-
-          @media screen and (max-width: 768px) {
-            width: Min(8.333vw, 64px);
-            height: Min(11.719vw, 90px);
-          }
         }
       }
 
@@ -84,6 +70,7 @@
       &:nth-child(4) {
         grid-area: e;
         position: relative;
+        z-index: 2;
 
         .grid-layout__hero {
           position: absolute;

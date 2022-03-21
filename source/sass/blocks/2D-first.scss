@@ -12,4 +12,68 @@
     top: 50%;
     transform: translateY(-45%);
   }
+
+  @media screen and (max-width: 992px) {
+    .container, &__box {
+      position: initial;
+    }
+
+    &__article {
+      max-width: 55%;
+      z-index: 2;
+    }
+
+    &__image {
+      width: 40%;
+      height: auto;
+      bottom: 10%;
+      transform: none;
+      animation: none;
+      top: initial;
+      z-index: 0;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    background-size: cover;
+
+    &__box {
+      position: relative;
+      z-index: 10;
+    }
+
+    &__article {
+      max-width: 65%;
+    }
+
+    &__image {
+      transform: translate(20%,25%);
+      z-index: 2;
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    padding-bottom: 18vw;
+
+    &__box {
+      position: relative;
+      z-index: 10;
+    }
+
+    &__article {
+      max-width: 100%;
+    }
+
+    &__image {
+      position: relative;
+      z-index: 2;
+      top: initial;
+      bottom: 0;
+      right: initial;
+      transform: none;
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
 }

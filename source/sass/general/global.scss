@@ -11,8 +11,10 @@ body {
   font-size: inherit;
   line-height: inherit;
   min-height: -webkit-fill-available;
+}
 
-
+main {
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 1024px) {
@@ -149,15 +151,9 @@ input[type="number"] {
   }
 }
 
-
-[data-tab-content] {
+.burger-button {
   display: none;
-
-  &.active {
-    display: block;
-  }
 }
-
 
 * {
 

@@ -1,5 +1,5 @@
 .list-sec {
-  padding-top: clamp(40px, 10vw, 120px);
+  padding-top: clamp(60px, 10vw, 120px);
   padding-bottom: clamp(20px, 5.833vw, 70px);
   background-image: url(../img/list-sec-bg.png);
   background-color: $bg--d;
@@ -58,13 +58,23 @@
     }
 
     @media screen and (max-width: 767px) {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 100%;
     }
 
     &--vr {
       position: relative;
       grid-template-columns: repeat(2, 1fr);
       padding-left: 33%;
+
+      @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0;
+      }
+
+      @media screen and (max-width: 575px) {
+        grid-template-columns: 100%;
+        padding-left: 0;
+      }
     }
   }
 
@@ -79,6 +89,10 @@
     img, picture {
       width: 100%;
       height: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
     }
   }
   // &__item {

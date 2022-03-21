@@ -9,8 +9,9 @@
   z-index: 0;
 
   @media screen and (max-width: 1024px) {
-    background-size: 150%;
-    background-position: top;
+    background-size: cover;
+    background-position: top right;
+    background-attachment: scroll;
   }
 
   &:before {
@@ -34,23 +35,32 @@
     font-family: $font-family2;
     font-style: normal;
     font-weight: 700;
-    font-size: clamp(40px, 5.865vw, 55px);
+    font-size: clamp(35px, 5.865vw, 55px);
     line-height: 125%;
     text-transform: uppercase;
     color: $text--w;
     margin-bottom: clamp(30px,3.385vw ,65px);
+
+    @media screen and (max-width: 579px) {
+      text-align: center;
+    }
   }
 
   &__list {
     display: flex;
     align-items: center;
-    grid-gap: 50px;
+    flex-wrap: wrap;
+    grid-gap: 30px clamp(30px, 4.167vw, 50px);
+
+    @media screen and (max-width: 579px) {
+      justify-content: center;
+    }
   }
 
   &__item {
     display: flex;
     align-items: center;
-    grid-gap: 25px;
+    grid-gap: clamp(15px, 2.083vw, 25px);
   }
 
   &__span {

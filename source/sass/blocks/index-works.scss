@@ -3,13 +3,13 @@
   padding: clamp(20px, 3.333vw, 40px) 0 clamp(20px, 3.333vw, 40px);
 
   &__top {
-    margin-bottom: clamp(20px, 6.667vw, 80px);
+    margin-bottom: clamp(30px, 6.667vw, 80px);
   }
 
   .grid-layout {
     display: flex;
     flex-direction: column;
-    grid-gap: clamp(15px, 2.5vw, 30px);
+    grid-gap: clamp(5px, 2.5vw, 30px);
   }
 
   .first-row {
@@ -19,7 +19,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: auto;
-      grid-gap: clamp(15px, 2.5vw, 30px);
+      grid-gap: clamp(5px, 2.5vw, 30px);
       grid-template-areas:
       "a b c f"
       "a e e f";
@@ -88,7 +88,7 @@
     &__list {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: clamp(15px, 2.5vw, 30px);
+      grid-gap: clamp(5px, 2.5vw, 30px);
       grid-template-areas:
       "a b c d";
     }
@@ -141,7 +141,7 @@
     &__list {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: clamp(15px, 2.5vw, 30px);
+      grid-gap: clamp(5px, 2.5vw, 30px);
       grid-template-areas:
       "a b b d"
       "a c c e";

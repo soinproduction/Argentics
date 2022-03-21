@@ -5,13 +5,13 @@
   max-width: 1000px;
   margin: 0 auto;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 575px) {
     grid-template-columns: 1fr;
   }
 
   &__image {
     width: 100%;
-    height: Min(26.833vw, 322px);
+    height: clamp(300px,26.833vw, 322px);
     border-radius: Min(1.25vw,15px) Min(1.25vw,15px) 0 0;
 
     img, picture {

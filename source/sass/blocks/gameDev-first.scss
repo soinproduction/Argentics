@@ -9,10 +9,20 @@
   }
 
   &__image {
-    width: Min(40.667vw, 488px);
-    height: Min(48.667vw, 581px);
+    width: clamp(233px,40.667vw,488px);
+    height: clamp(279px,48.667vw,581px);
     top: 75%;
     right: -5%;
     transform: translateY(-45%);
+
+    @media screen and (max-width: 575px) {
+      transform: translate(20%,-45%);
+    }
+
+    @media screen and (max-width: 420px) {
+      transform: translate(40%,-45%);
+      width: 200px;
+      height: 238px;
+    }
   }
 }

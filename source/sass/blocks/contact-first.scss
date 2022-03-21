@@ -5,6 +5,7 @@
   background-size: cover;
   background-attachment: scroll;
   z-index: 0;
+  overflow: hidden;
 
   &__box {
     z-index: 0;
@@ -28,5 +29,37 @@
     right: 0;
     background: linear-gradient(180deg, rgba(4, 13, 33, 0) 0%, #040D21 100%);
     z-index: 1;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__article {
+      max-width: 55%;
+    }
+
+    &__image {
+      transform: translate(15% ,-40%);
+    }
+  }
+
+
+  @media screen and (max-width: 500px) {
+    &__article {
+      max-width: 100%;
+    }
+
+    &__image {
+      transform: translate(15% ,-40%);
+      position: initial;
+      transform: none;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+    }
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 40px;
+    }
   }
 }

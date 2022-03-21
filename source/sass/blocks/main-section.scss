@@ -32,6 +32,10 @@
       height: 100%;
     }
   }
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 80px;
+  }
 }
 
 .red-span {
@@ -56,7 +60,7 @@
 
   &__text {
     font-family: $font-family4;
-    font-size: clamp(18px,2.608vw,20px);
+    font-size: clamp(17px,2.608vw,20px);
     font-style: normal;
     font-weight: 400;
     line-height: 160%;
@@ -77,6 +81,15 @@
     color: #6D80F6;
     font-weight: 600;
     font-size: 22px;
+  }
+
+
+  @media screen and (max-width: 767px) {
+    max-width: 70%;
+  }
+
+  @media screen and (max-width: 400px) {
+    max-width: 80%;
   }
 }
 
@@ -99,7 +112,7 @@
     &::before {
       content: '';
       width: 200vw;
-      height: Min(58.333vw, 700px);
+      height: clamp(300px,58.333vw, 700px);
       position: absolute;
       left: 0;
       top: Max(-25.833vw, -325px);
@@ -107,6 +120,10 @@
       background-size: 100% 100%;
       background-repeat: no-repeat;
       animation: wave 10s infinite linear;
+
+      @media screen and (max-width:575px) {
+        top: -160px;
+      }
     }
   }
 }

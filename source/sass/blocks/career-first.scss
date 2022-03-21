@@ -3,10 +3,11 @@
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
+  overflow: hidden;
   z-index: 0;
 
   &__box {
-    z-index: 0;
+    z-index: 1;
   }
 
   &__image {
@@ -27,5 +28,42 @@
     right: 0;
     background: linear-gradient(180deg, rgba(4, 13, 33, 0) 0%, #040D21 100%);
     z-index: 1;
+  }
+
+  &__article {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 45px;
+
+    &__article {
+      max-width: 60%;
+    }
+
+    &__image {
+      transform: translate( 20%,-40%);
+    }
+
+  }
+
+  @media screen and (max-width: 500px) {
+    &__article {
+      max-width: 100%;
+    }
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 40px;
+    }
+
+    &__image {
+      transform: none;
+      position: initial;
+      width: 100%;
+    }
+
   }
 }

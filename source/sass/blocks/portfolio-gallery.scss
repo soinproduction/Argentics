@@ -29,14 +29,14 @@
       display: flex;
     }
 
+    @media screen and (max-width: 900px) {
+      grid-gap: 15px;
+    }
+
     @media screen and (max-width: 575px) {
       grid-template-columns: repeat(3, fit-content(Min(30.957vw, 178px)));
       max-height: calc(Min(30.957vw, 178px) * 3 - 3px);
       grid-gap: 10px;
-    }
-
-    @media screen and (max-width: 900px) {
-      grid-gap: 15px;
     }
   }
 

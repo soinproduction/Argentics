@@ -25,6 +25,13 @@
     grid-auto-flow: dense;
     align-items: center;
     grid-gap: 25px;
+
+    @media screen and (max-width: 575px) {
+      flex-direction: column-reverse;
+      display: flex;
+      max-width: 90%;
+      margin: 0 auto;
+    }
   }
 
   &__article {
@@ -34,7 +41,7 @@
 
   &__title {
     font-family: $font-family2;
-    font-size: 42px;
+    font-size: clamp(30px, 3.5vw, 42px);
     font-style: normal;
     font-weight: 700;
     line-height: 115%;
@@ -44,16 +51,21 @@
 
   &__text {
     font-family: $font-family4;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     font-style: normal;
     font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0em;
+    line-height: 165%;
     text-align: left;
     color: $text--w;
 
     & + & {
       margin-top: clamp(15px, 2.5vw, 30px);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    &__image {
+      width: Min(52.174vw,300px);
     }
   }
 

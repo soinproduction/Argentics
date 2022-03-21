@@ -38,7 +38,7 @@
     font-family: $font-family4;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp(16px, 1.5vw, 18px);
     line-height: 30px;
     color: $text--w;
 
