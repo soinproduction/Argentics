@@ -1,0 +1,46 @@
+.career-second {
+  background-color: $bg--d;
+  padding-top: clamp(40px,5vw,60px);
+  padding-bottom: clamp(40px,6.667vw,80px);
+
+  &__top {
+    margin-bottom: clamp(35px,5.417vw,65px);
+  }
+
+  &__icon {
+    fill: transparent;
+    min-height: Min(5.833vw, 70px);
+  }
+
+  &__list {
+    padding: clamp(40px, 6.667vw,80px) clamp(50px,9.583vw,115px);
+    background: rgba(39, 56, 94, 0.4);
+    grid-gap: clamp(20px, 8.333vw,100px);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 460px) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(15px, 3.333vw,30px);
+  }
+
+  &__text {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clapm(14px, 1.5vw, 18px);
+    line-height: 156%;
+    color: #FFFFFF;
+  }
+}

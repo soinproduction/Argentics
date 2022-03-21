@@ -1,0 +1,34 @@
+.breadcrumbs {
+  display: flex;
+  grid-gap: 10px;
+  flex-wrap: wrap;
+
+  &__item:not(:first-child) {
+    padding-left: 10px;
+    position: relative;
+
+    &::before {
+      content: '/';
+      margin-right: 10px;
+      font-family: $font-family4;
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(16px, 1.875vw,18px);
+      line-height: 100%;
+      color: $text--a;
+    }
+  }
+
+  &__item:last-child {
+    pointer-events: none;
+  }
+
+  &__link {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 1.875vw,18px);
+    line-height: 100%;
+    color: $text--a;
+  }
+}

@@ -1,0 +1,31 @@
+.career-first {
+  background-image: url(../img/career_bg.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  z-index: 0;
+
+  &__box {
+    z-index: 0;
+  }
+
+  &__image {
+    width: Min(64.583vw, 775px);
+    height: Min(45.417vw, 545px);
+    right: -10%;
+    top: 50%;
+    transform: translateY(-40%);
+  }
+
+  &:before {
+    width: 100%;
+    height: clamp(200px, 33.333vw ,400px);
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(4, 13, 33, 0) 0%, #040D21 100%);
+    z-index: 1;
+  }
+}

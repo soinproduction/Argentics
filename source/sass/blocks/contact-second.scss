@@ -1,0 +1,73 @@
+.contact-second {
+  background-color: $bg--d;
+  padding-bottom: clamp(40px, 13.917vw,167px);
+
+  &__box {
+    background: rgba(39, 56, 94, 0.4);
+    border-radius: 10px;
+    margin-top: Max(-12.417vw, -149px);
+    padding: clamp(30px, 5.833vw,70px)
+             clamp(15px, 10.917vw,131px);
+    display: grid;
+    grid-template-columns: repeat(2, 47%);
+    justify-content: space-between;
+    align-items: stretch;
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: 100%;
+      grid-gap: 40px;
+    }
+
+    @media screen and (max-width: 575px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 3.333vw,40px);
+  }
+
+  &__title {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(28px, 3.5vw, 42px);
+    line-height: 86%;
+    text-transform: uppercase;
+    color: $text--w;
+  }
+
+  &__text {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 1.5vw,18px);
+    line-height: 156%;
+    color: #FFFFFF;
+    flex-grow: 1;
+  }
+
+  &__link {
+    width: clamp(150px,15vw,180px);
+    height: clamp(40px,4.167vw,50px);
+    background: $bg--a;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(16px,1.667vw,20px);
+    line-height: 100%;
+    color: $text--w;
+
+    &:hover {
+      background: $bg--f;
+    }
+  }
+}

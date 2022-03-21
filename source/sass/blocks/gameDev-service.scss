@@ -44,9 +44,11 @@
     font-family: $font-family2;
     font-style: normal;
     font-weight: 700;
-    font-size: 22px;
-    line-height: 28px;
+    font-size: clamp(18px, 1.833vw, 22px);
+    line-height: 120%;
     color: $text--e;
+    text-transform: uppercase;
+    user-select: none;
   }
 
   &__icon {

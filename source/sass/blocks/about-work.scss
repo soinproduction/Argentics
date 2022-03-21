@@ -1,0 +1,48 @@
+.about-work {
+  background-color: $bg--w;
+  padding-top: clamp(40px, 8.333vw,100px);
+  padding-bottom: clamp(40px,10.417vw,125px);
+
+  &__top {
+    margin-bottom: clamp(35px,3.333vw,40px);
+  }
+
+  &__list {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(15px, 1.667vw,20px);
+  }
+
+  &__item {
+    background: rgba(244, 244, 244, 0.5);
+    border: 1px solid rgba(99, 101, 105, 0.5);
+    border-radius: 10px;
+    padding: clamp(20px, 3.333vw,40px) clamp(15px, 2.667vw,32px);
+  }
+
+  &__title {
+    font-family: $font-family2;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(18px, 1.833vw,22px);
+    line-height: 110%;
+    text-transform: uppercase;
+    color: $text--e;
+    margin-bottom: clamp(15px, 2.083vw,25px);
+  }
+
+  &__step {
+    color: $text--a;
+  }
+
+  &__text {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(14px, 1.333vw,16px);
+    line-height: 162%;
+    color: $text--a;
+  }
+}

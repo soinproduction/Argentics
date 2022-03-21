@@ -1,0 +1,39 @@
+.about-services {
+  padding-top: clamp(40px,5vw,60px);
+  padding-bottom: clamp(40px,15.167vw,182px);
+
+  .index-services__box {
+    padding: clamp(40px,8.333vw,100px) clamp(20px,10.833vw,130px);
+  }
+
+  .index-services__list {
+    width: 100%;
+    grid-template-columns: repeat(3, clamp(170px,16.667vw,200px));
+    justify-content: space-between;
+    grid-gap: Min(6.417vw,77px) Min(2.5vw,30px);
+    overflow: hidden;
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(2, 45%);
+    }
+
+    @media screen and (max-width: 575px) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  .index-services__text::before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    right: -5vw;
+    transform: translateX(-50%);
+    bottom: -30px;
+    top: 0;
+    background-color: rgba(255,255,255,.2);
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+}

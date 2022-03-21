@@ -25,46 +25,47 @@
     @media screen and (max-width: 1360px) {
       margin-left: -10%;
     }
+
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
   }
 
   &__list {
     margin-left: auto;
-    width: Min(62.917vw, 755px);
+    width: clamp(690px,62.917vw, 755px);
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 200px);
     grid-gap: Min(6.417vw,77px) Min(5.25vw, 63px);
+    overflow: hidden;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      grid-template-columns: repeat(3, 30%);
+      grid-gap: Min(6.417vw,77px) 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(2, 45%);
+    }
+
+    @media screen and (max-width: 575px) {
+      grid-template-columns: 100%;
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    grid-gap: clamp(5px, 0.417vw, 10px);
+    grid-gap: clamp(5px, 1.25vw, 15px);
 
     svg {
       min-height: 50px;
     }
 
-    &:not(:nth-of-type(3n)) {
-      .index-services__text::before {
-          content: '';
-          width: 1px;
-          position: absolute;
-          right: calc(Max(-5.25vw, -63px) / 2);
-          transform: translateX(-50%);
-          bottom: -30px;
-          top: 0;
-          background-color: rgba(255, 255, 255, 0.2);
-      }
-    }
-
     @media screen and (max-width: 1145px) {
-      &:not(:nth-of-type(3n)) {
-        .index-services__text::before {
-            display: none;
-        }
-      }
-
       .index-services__title br {
         display: none;
       }
@@ -78,9 +79,10 @@
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 31px;
+    line-height: 135%;
+    display: flex;
     color: $text--w;
-
+    height: 100%;
   }
 
   &__text {
@@ -88,9 +90,24 @@
     font-family: $font-family4;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: clamp(14px, 1.5vw,18px);
+    line-height: 135%;
     color: $text--w;
     flex-grow: 1;
+
+    &::before {
+      content: '';
+      width: 1px;
+      position: absolute;
+      right: calc(Max(-5.25vw, -63px) / 2);
+      transform: translateX(-50%);
+      bottom: -30px;
+      top: 0;
+      background-color: rgba(255, 255, 255, 0.2);
+
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+    }
   }
 }

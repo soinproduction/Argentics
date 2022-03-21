@@ -1,0 +1,63 @@
+.career-vacancies {
+  background: #182133;
+
+  .gameDev-service__item {
+    background-color: $bg--w;
+  }
+
+  &__top {
+    margin-bottom: clamp(35px,5.417vw,65px);
+  }
+
+  &__inner {
+    padding: clamp(15px,2.917vw,35px) 0 0;
+  }
+
+  &__subtitle {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: $text--a;
+    display: inline-block;
+    margin-bottom: clamp(15px, 2.917vw,35px);
+  }
+
+  &__item {
+    max-width: 700px;
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(14px, 1.333vw, 16px);
+    line-height: 162%;
+    color: $text--a;
+    display: block;
+  }
+
+  &__list {
+    margin-bottom: clamp(15px, 2.083vw,25px);
+  }
+
+  &__link {
+    width: clamp(120px,13.565vw,162.78px);
+    height: clamp(40px,3.75vw,45px);
+    background: $bg--a;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(16px,1.5vw,18px);
+    line-height: 100%;
+    color: $text--w;
+
+    &:hover {
+      background: $bg--f;
+    }
+  }
+}

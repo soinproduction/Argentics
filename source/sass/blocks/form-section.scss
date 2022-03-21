@@ -121,4 +121,10 @@
       grid-gap: 40px;
     }
   }
+
+  @media screen and (max-width: 575px) {
+    &__form {
+      max-width: 90%;
+    }
+  }
 }
