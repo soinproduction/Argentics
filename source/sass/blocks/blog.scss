@@ -11,7 +11,7 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: clamp(20px, 4.167vw, 40px);
+    grid-gap: clamp(20px, 8.333vw, 80px);
     align-items: stretch;
     margin-bottom: clamp(60px, 8.333vw, 80px);
 

@@ -39,6 +39,7 @@
       transform: scale(1.1) translateY(-10%);
 
       .hide-box {
+        // height: initial;
         transform: translate(-50%, 29px) scaleY(1);
         visibility: visible;
         opacity: 1;
@@ -48,8 +49,6 @@
       .header__nav-link.accordion::before {
         transform: translateY(-20%) scaleY(-1);
       }
-
-
     }
   }
 
@@ -99,12 +98,13 @@
   left: 50%;
   height: 0;
   transform: translate(-50%, 29px) scaleY(0);
-  z-index: 20;
+  z-index: 0;
 
   &::before {
     width: 100%;
     top: -40px;
-    height: 40px;
+    z-index: 1;
+    height:40px;
     content: '';
     background-color: transparent;
     position: absolute;
