@@ -1,0 +1,54 @@
+.error-sec {
+  background: $bg--d;
+  padding: clamp(120px, 11.927vw ,229px) 0 clamp(40px, 21.25vw,255px);
+
+  @media screen and (max-width: 600px) {
+    padding: clamp(120px, 11.927vw ,229px) 0 clamp(40px,16.25vw,255px);
+  }
+
+  &__link {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 800;
+    font-size: clamp(16px, 2vw, 24px);
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text--w;
+    width: clamp(130px, 18.833vw, 226px);
+    height: clamp(33px, 5vw, 60px);
+    background: $bg--a;
+    border-radius: 5px;
+    will-change: transform;
+    transition: all .4s;
+
+    &:hover {
+      background-color: #2ab841;
+      transform: scale(1.1) translateZ(0);
+    }
+  }
+
+  &__box {
+    position: relative;
+
+    &::before {
+      width: Min(28.333vw, 340px);
+      height: Min(28.333vw, 340px);
+      background-image:$error_icon;
+      background-size: cover;
+      content: '';
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__title {
+    font-size: clamp(25px,5.865vw,55px);
+    width: calc(100% - Min(28.333vw, 340px) - 15px);
+    max-width: 500px;
+    @media screen and (max-width: 579px) {
+      text-align: left;
+    }
+  }
+}

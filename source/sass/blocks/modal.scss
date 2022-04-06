@@ -1,0 +1,93 @@
+.overlay {
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(4, 13, 33, 0.9);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  overflow-y: scroll;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    .modal {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+}
+
+.modal-wrapper {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.modal {
+  transition: all .4s;
+  transition-delay: .3s;
+  opacity: 0;
+  transform: scale(0) translateY(-1000%);
+  position: relative;
+  width: clamp( 300px,88.583vw, 763px);
+  padding: clamp( 40px,8.333vw, 100px) 20px;
+  background-color: rgb(39, 56, 94);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &__close {
+    position: absolute;
+    z-index: 2;
+    top: clamp(10px, 1.667vw, 20px);
+    right: clamp(10px, 1.667vw, 20px);
+  }
+
+  &__icon {
+    margin-bottom: clamp(30px,3.333vw, 40px);
+  }
+
+  &__text {
+    text-align: center;
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 24px);
+    line-height: 140%;
+    color: $text--w;
+    margin-bottom: clamp(20px, 3.333vw,40px);
+    max-width: 420px;
+  }
+
+  &__btn {
+    font-family: $font-family4;
+    font-style: normal;
+    font-weight: 800;
+    font-size: clamp(16px, 2vw, 24px);
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text--w;
+    width: clamp(130px, 18.833vw, 170px);
+    height: clamp(33px, 5vw, 60px);
+    background: $bg--a;
+    border-radius: 5px;
+    will-change: transform;
+    transition: all .4s;
+
+    &:hover {
+      background-color: #2ab841;
+      transform: scale(1.1) translateZ(0);
+    }
+  }
+}

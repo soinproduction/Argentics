@@ -1,4 +1,6 @@
 
+
+
 // init sliders
 
 (function () {
@@ -221,3 +223,45 @@ if (moreBtn) {
     };
   });
 }
+
+
+const overlay = document.querySelector('.overlay');
+const overlayHide = document.querySelectorAll('[data-close]');
+
+for (const btn of overlayHide) {
+  btn.onclick = function() {
+    overlay.classList.remove('active');
+  }
+}
+
+// закрытие по клику вне окна
+if (overlay) {
+  overlay.addEventListener('click', function(e) {
+    e.stopPropagation();
+    let curentTargetWrapper = document.querySelector('.modal-wrapper')
+    if (event.target === curentTargetWrapper) {
+      overlay.classList.remove('active');
+    }
+  })
+}
+// закрытие по Escape
+document.addEventListener('keydown', function(e) {
+	if( e.keyCode == 27 ){
+		overlay.classList.remove('active');
+	}
+});
+
+
+
+
+// демо для показа.
+// для показа модалки после успешной отправки формы, нужно добавить класс active к блоку overlay
+const overlayOpen = document.querySelector('[data-open]');
+
+overlayOpen.onclick = showOverlay;
+function showOverlay() {
+  overlay.classList.add('active');
+}
+
+
+
