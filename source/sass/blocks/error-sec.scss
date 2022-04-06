@@ -47,6 +47,20 @@
     font-size: clamp(25px,5.865vw,55px);
     width: calc(100% - Min(28.333vw, 340px) - 15px);
     max-width: 500px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: clamp(200px,45.167vw, 542px);
+      height: clamp(200px,45.167vw, 542px);
+      background: radial-gradient(50% 50% at 50% 50%, #17387F 0%, rgba(23, 56, 127, 0) 100%);
+      border-radius: 50%;
+      z-index: -1;
+      left: 10%;
+      top: -70%;
+    }
+
     @media screen and (max-width: 579px) {
       text-align: left;
     }
