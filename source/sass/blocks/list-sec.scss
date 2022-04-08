@@ -26,6 +26,10 @@
     background-image: url(../img/list-sec-bg5.png);
   }
 
+  &--services {
+    background-image: url(../img/list-sec-bg6.png);
+  }
+
   &:before {
     width: 100%;
     height: clamp(200px, 18.229vw ,350px);
