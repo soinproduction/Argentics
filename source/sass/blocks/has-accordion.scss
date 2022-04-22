@@ -1,0 +1,141 @@
+.accordion-button {
+  width: 24px;
+  height: 24px;
+  background: #202D49;
+  border-radius: 3px;
+  display: flex;
+  position: relative;
+  transition: all .4s;
+  flex-shrink: 0;
+  margin-top: clamp(10px, 1.667vw, 20px);
+
+  &::before {
+    width: 40%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    height: 40%;
+    width: 2px;
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .4s;
+  }
+
+  &.active {
+    transform: rotate(180deg);
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}
+
+[data-parent="1"] {
+  grid-area: a;
+}
+[data-parent="2"] {
+  grid-area: b;
+}
+[data-parent="3"] {
+  grid-area: c;
+}
+[data-parent="4"] {
+  grid-area: d;
+}
+[data-parent="5"] {
+  grid-area: e;
+}
+[data-parent="6"] {
+  grid-area: f;
+}
+
+[data-content="1"] {
+  grid-area: a-con;
+}
+[data-content="2"] {
+  grid-area: b-con;
+}
+[data-content="3"] {
+  grid-area: c-con;
+}
+[data-content="4"] {
+  grid-area: d-con;
+}
+[data-content="5"] {
+  grid-area: e-con;
+}
+[data-content="6"] {
+  grid-area: f-con;
+}
+
+
+.has-accordion {
+  grid-gap: 0 Min(5.25vw,63px);
+  grid-template-areas:
+  "a b c"
+  "a-con a-con a-con"
+  "b-con b-con b-con"
+  "c-con c-con c-con"
+  "d e f"
+  "d-con d-con d-con"
+  "e-con e-con e-con"
+  "f-con f-con f-con";
+
+  .index-services__item {
+    margin-bottom: clamp(15px, 2.917vw, 35px);
+  }
+
+  .accoridon-box__article {
+    padding-bottom: clamp(15px, 2.917vw, 35px);
+
+    p {
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 400;
+      font-size: clamp(15px, 1.5vw, 18px);
+      line-height: 111%;
+      color:#4B5A7C;
+    }
+  }
+
+  @media (max-width: 767px) {
+    grid-template-areas:
+    "a b"
+    "a-con a-con"
+    "b-con b-con"
+    "c d"
+    "c-con c-con"
+    "d-con d-con"
+    "e f"
+    "e-con e-con"
+    "f-con f-con";
+  }
+
+  @media (max-width: 575px) {
+    grid-gap: 15px;
+    grid-template-areas:
+    "a"
+    "a-con"
+    "b"
+    "b-con"
+    "c"
+    "c-con"
+    "d"
+    "d-con"
+    "e"
+    "e-con"
+    "f"
+    "f-con";
+  }
+}

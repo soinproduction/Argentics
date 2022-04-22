@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="Ru">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="Description" content="default">
+  <title>Argentics</title>
+  <script src="js/picturefill.min.js" async="async"></script>
+  <link href="img/fav.png" rel="icon">
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaBook.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/futuramediumc.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/FuturaPT.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Lato-ExtraBold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PT-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PT-Italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PT-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header>
+  <div class="container">
+    <div class="header">
+      <a href="index.html" class="header__logo">
+        <svg width="148" height="29">
+          <use href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <div class="header__mobile">
+        <button class="burger-button">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <span class="header__nav-link accordion">
+                Services
+              </span>
+              <div class="hide-box panel">
+                <ul class="hide-list">
+                  <li class="hide-list__item">
+                    <a href="gameDev.html" class="hide-list__link">Game Development</a>
+                  </li>
+                  <li class="hide-list__item">
+                    <a href="career.html" class="hide-list__link">Game Art</a>
+                  </li>
+                  <li class="hide-list__item">
+                    <a href="2D_Art.html" class="hide-list__link">2D Art</a>
+                  </li>
+                  <li class="hide-list__item">
+                    <a href="3D_Art.html" class="hide-list__link">3D Art</a>
+                  </li>
+                  <li class="hide-list__item">
+                    <a href="2D_Character.html" class="hide-list__link">2D Character</a>
+                  </li>
+                  <li class="hide-list__item">
+                    <a href="vr.html" class="hide-list__link">AR/VR</a>
+                  </li>
+                </ul>
+              </div>
+
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="portfolio.html">
+                Portfolio
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="about.html">
+                About us
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="career.html">
+                Careers
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="blog.html">
+                Blog
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a href="contact.html" class="header__contact">
+          Contact us
+        </a>
+      </div>
+
+      <button class="burger-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+
+  <main>
+    <section class="portfolio-gallery">
+      <div class="container">
+        <div class="main-top portfolio-gallery__top">
+          <p class="main-top__title">
+            OUR WORKS
+          </p>
+          <p class="main-top__text">
+            We make everything with passion and love
+          </p>
+        </div>
+        <div class="portfolio-gallery__box">
+          <ul class="portfolio-gallery__list" id="portfolioGallery">
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img2.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img2.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img2.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img3.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img3.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img3.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img4.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img4.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img4.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img5.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img5.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img5.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img6.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img6.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img6.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img7.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img7.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img7.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img8.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img8.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img8.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img9.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img9.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img9.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img10.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img10.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img10.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img11.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img11.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img11.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img12.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img12.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img12.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img13.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img13.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img13.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img14.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img14.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img14.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img15.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img15.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img15.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img11.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img11.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img11.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img12.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img12.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img12.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img13.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img13.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img13.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img14.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img14.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img14.png" alt="image">
+              </picture>
+            </li>
+            <li class="portfolio-gallery__item" data-src="img/portfolio-gallery/img15.png">
+              <picture>
+                <source type="image/webp" srcset="img/portfolio-gallery/img15.webp">
+                <img width="306" height="290" src="img/portfolio-gallery/img15.png" alt="image">
+              </picture>
+            </li>
+          </ul>
+
+          <button class="veiw-more">
+            More Works
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-list">
+      <div class="container">
+        <ul class="portfolio-list__list">
+          <li class="portfolio-list__item" style="background-image: url(img/portfolio-list/bg.png);">
+            <div class="portfolio-list__top">
+              <div class="portfolio-list__image-wrapper">
+                <div class="portfolio-list__image dragon-image">
+                  <picture>
+                    <source type="image/webp" width="566" height="600" srcset="img/portfolio-list/img.webp">
+                    <img width="566" height="600" src="img/portfolio-list/img.png" alt="image">
+                  </picture>
+                </div>
+              </div>
+              <div class="portfolio-list__description">
+                <span class="portfolio-list__title">
+                  VR game <br>
+                  for Steam
+                </span>
+                <p class="portfolio-list__text">
+                  "M.A.D. Cliff – All Quiet On The Bridge" – is an arcade FPS, delivered by the means of VR.
+                  We created atmosphere of a ruthless and unforgiving world filled with mystical creatures.
+                </p>
+                <ul class="portfolio-list__info">
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Client
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Flying Whale
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Indastry
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Game
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Region
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Europe
+                    </span>
+                  </li>
+                </ul>
+                <a href="#" class="portfolio-list__link">
+                  View Project
+                </a>
+              </div>
+              <div class="vr-info">
+                <div class="vr-info__image">
+                  <picture>
+                    <source type="image/webp" width="80" height="53" srcset="img/portfolio-list/vr.webp">
+                    <img width="80" height="53" src="img/portfolio-list/vr.png" alt="image">
+                  </picture>
+                </div>
+                <span class="vr-info__text">
+                  VR Defence game
+                </span>
+              </div>
+            </div>
+            <ul class="portfolio-list__bottom">
+              <li class="portfolio-list__bottom-item">
+                Game Development
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Concept Art
+              </li>
+              <li class="portfolio-list__bottom-item">
+                UI-UX
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Animation
+              </li>
+              <li class="portfolio-list__bottom-item">
+                VFX
+              </li>
+            </ul>
+          </li>
+          <li class="portfolio-list__item" style="background-image: url(img/portfolio-list/bg2.png);">
+            <div class="portfolio-list__top">
+              <div class="portfolio-list__image-wrapper">
+                <div class="portfolio-list__image solder-image">
+                  <picture>
+                    <source type="image/webp" width="496" height="627" srcset="img/portfolio-list/img2.webp">
+                    <img width="496" height="627" src="img/portfolio-list/img2.png" alt="image">
+                  </picture>
+                </div>
+              </div>
+              <div class="portfolio-list__description">
+                <span class="portfolio-list__title">
+                  Big VR combat simulator
+                </span>
+                <p class="portfolio-list__text">
+                  A colossal realistic immersive combat simulator with over a dozen maps that have a combined area of 75 square miles.
+                </p>
+                <ul class="portfolio-list__info">
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Client
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Flying Whale
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Indastry
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Game
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Region
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Europe
+                    </span>
+                  </li>
+                </ul>
+                <a href="#" class="portfolio-list__link">
+                  View Project
+                </a>
+              </div>
+
+              <div class="vr-info">
+                <div class="vr-info__image">
+                  <picture>
+                    <source type="image/webp" width="80" height="53" srcset="img/portfolio-list/vr.webp">
+                    <img width="80" height="53" src="img/portfolio-list/vr.png" alt="image">
+                  </picture>
+                </div>
+                <span class="vr-info__text">
+                  virtual reality
+                  SIMULATOR
+                </span>
+              </div>
+
+            </div>
+            <ul class="portfolio-list__bottom">
+              <li class="portfolio-list__bottom-item">
+                Game Development
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Concept Art
+              </li>
+              <li class="portfolio-list__bottom-item">
+                UI-UX
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Animation
+              </li>
+              <li class="portfolio-list__bottom-item">
+                VFX
+              </li>
+            </ul>
+          </li>
+          <li class="portfolio-list__item" style="background-image: url(img/portfolio-list/bg3.png);">
+            <div class="portfolio-list__top">
+              <div class="portfolio-list__image-wrapper">
+                <div class="portfolio-list__image monster-image">
+                  <picture>
+                    <source type="image/webp" width="528" height="466" srcset="img/portfolio-list/img3.webp">
+                    <img width="528" height="466" src="img/portfolio-list/img3.png" alt="image">
+                  </picture>
+                </div>
+              </div>
+              <div class="portfolio-list__description">
+                <span class="portfolio-list__title">
+                  AR app for <br>
+                  an oil brand
+                </span>
+                <p class="portfolio-list__text">
+                  The app allows its users to interact with branded goods to enjoy AR experience, play mini games and win awards - all in a seamless and engaging manner.
+                </p>
+                <ul class="portfolio-list__info">
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Client
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Flying Whale
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Indastry
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Game
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Region
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Europe
+                    </span>
+                  </li>
+                </ul>
+                <a href="#" class="portfolio-list__link">
+                  View Project
+                </a>
+              </div>
+            </div>
+            <ul class="portfolio-list__bottom">
+              <li class="portfolio-list__bottom-item">
+                Game Development
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Concept Art
+              </li>
+              <li class="portfolio-list__bottom-item">
+                UI-UX
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Animation
+              </li>
+              <li class="portfolio-list__bottom-item">
+                VFX
+              </li>
+            </ul>
+          </li>
+          <li class="portfolio-list__item" style="background-image: url(img/portfolio-list/bg4.png);">
+            <div class="portfolio-list__top">
+              <div class="portfolio-list__image-wrapper">
+                <div class="portfolio-list__image phone-image">
+                  <picture>
+                    <source type="image/webp" width="553" height="492" srcset="img/portfolio-list/img4.webp">
+                    <img width="553" height="492" src="img/portfolio-list/img4.png" alt="image">
+                  </picture>
+                </div>
+              </div>
+              <div class="portfolio-list__description">
+                <span class="portfolio-list__title">
+                  AR game <br> application
+                </span>
+                <p class="portfolio-list__text">
+                  This is an app with quite a number of AR experiences: a realistic model of a cow chewing grass, a 3D dairy town etc. Also it contains a runner mini game. It was designed and developed from scratch by us for a big national Dairy brand.
+                </p>
+                <ul class="portfolio-list__info">
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Client
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Flying Whale
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Indastry
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Game
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Region
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Europe
+                    </span>
+                  </li>
+                </ul>
+                <a href="#" class="portfolio-list__link">
+                  View Project
+                </a>
+              </div>
+            </div>
+            <ul class="portfolio-list__bottom">
+              <li class="portfolio-list__bottom-item">
+                Game Development
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Concept Art
+              </li>
+              <li class="portfolio-list__bottom-item">
+                UI-UX
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Animation
+              </li>
+              <li class="portfolio-list__bottom-item">
+                VFX
+              </li>
+            </ul>
+          </li>
+          <li class="portfolio-list__item" style="background-image: url(img/portfolio-list/bg5.png);">
+            <div class="portfolio-list__top">
+              <div class="portfolio-list__image-wrapper">
+                <div class="portfolio-list__image doublePhone-image">
+                  <picture>
+                    <source type="image/webp" width="541" height="450" srcset="img/portfolio-list/img5.webp">
+                    <img width="541" height="450" src="img/portfolio-list/img5.png" alt="image">
+                  </picture>
+                </div>
+              </div>
+              <div class="portfolio-list__description">
+                <span class="portfolio-list__title">
+                  Games <br>
+                  portal
+                </span>
+                <p class="portfolio-list__text">
+                  A cross-platform application for those who love skill-based PvP games and waging against opponents. Currently it's available on web and Android.
+                </p>
+                <ul class="portfolio-list__info">
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Client
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Flying Whale
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Indastry
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Game
+                    </span>
+                  </li>
+                  <li class="portfolio-list__info-item">
+                    <span class="portfolio-list__info-name">
+                      Region
+                    </span>
+                    <span class="portfolio-list__info-value">
+                      Europe
+                    </span>
+                  </li>
+                </ul>
+                <a href="#" class="portfolio-list__link">
+                  View Project
+                </a>
+              </div>
+            </div>
+            <ul class="portfolio-list__bottom">
+              <li class="portfolio-list__bottom-item">
+                Game Development
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Concept Art
+              </li>
+              <li class="portfolio-list__bottom-item">
+                UI-UX
+              </li>
+              <li class="portfolio-list__bottom-item">
+                Animation
+              </li>
+              <li class="portfolio-list__bottom-item">
+                VFX
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="form-section">
+  <div class="container">
+    <div class="main-top form-section__top">
+      <h2 class="main-top__title form-section__title">
+        LET'S TALK ABOUT YOUR PROJECT
+      </h2>
+      <p class="main-top__text form-section__text">
+        You surely have some cool projects in mind. <br>
+        Tell us your story, and we'll make your dreams come true!
+      </p>
+    </div>
+
+    <form action="#" class="form-section__form">
+      <fieldset class="form-section__fieldset form-section__fieldset--name">
+        <label for="#">
+          <input type="text" required="" placeholder="Your name">
+        </label>
+      </fieldset>
+
+      <fieldset class="form-section__fieldset form-section__fieldset--email">
+        <label for="#">
+          <input type="email" required="" placeholder="Your E-mail">
+        </label>
+      </fieldset>
+
+      <fieldset class="form-section__fieldset form-section__fieldset--message">
+        <label for="#">
+          <input type="text" required="" placeholder="Message">
+        </label>
+      </fieldset>
+
+      <button class="form-section__button" type="submit" data-open="">
+        Send
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+
+  </main>
+
+
+  <footer>
+  <div class="container">
+    <ul class="footer">
+      <li class="footer__coll footer__coll--first">
+        <a href="#" class="footer__logo">
+          <svg width="148" height="29">
+            <use href="img/sprite/sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <ul class="footer-list">
+          <li class="footer-list__item">
+            <span class="footer-list__text">
+              Ukraine / USA / Israel
+            </span>
+          </li>
+          <li class="footer-list__item">
+            <a href="mailto:contact@argentics.io" class="footer-list__mail">contact@argentics.io</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="footer__coll footer__coll--second">
+        <ul class="footer__nav">
+          <li class="footer__nav-item">
+            <a href="#">
+              2D Art
+            </a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#">
+              2D Characters
+            </a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#">
+              Game Development
+            </a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#">
+              Game Art
+            </a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#">
+              AR/VR
+            </a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#">
+              3D Art
+            </a>
+          </li>
+        </ul>
+        <span class="reserved">
+          © 2021 Argentics. All Rights Reserved.
+        </span>
+      </li>
+
+      <li class="footer__coll footer__coll--third">
+        <ul class="footer-social">
+          <li class="footer-social__item">
+            <a href="#" class="footer-social__link">
+              <svg class="footer-social__icon" width="34" height="27">
+                <use href="img/sprite/sprite.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social__item">
+            <a href="#" class="footer-social__link">
+              <svg class="footer-social__icon" width="38" height="28">
+                <use href="img/sprite/sprite.svg#in"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+</footer>
+
+<div class="overlay">
+
+  <div class="modal-wrapper">
+
+    <div class="modal">
+      <button class="modal__close" data-close="">
+        <svg width="28" height="28">
+          <use href="img/sprite/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <svg width="138" height="103" class="modal__icon">
+        <use href="img/sprite/sprite.svg#airbus"></use>
+      </svg>
+
+      <p class="modal__text">
+        Thank you for your submission! We'll get back to you shortly.
+      </p>
+
+      <button class="modal__btn" data-close="">
+        Ok
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <script src="js/swiper.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
+  <script src="js/common.min.js"></script>
+</body>
+
+</html>
+
+
