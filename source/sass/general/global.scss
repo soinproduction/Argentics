@@ -101,6 +101,7 @@ ul:not([class]) {
   display: flex;
   grid-gap: 5px;
   flex-direction: column;
+  margin: 10px 0;
 
   li {
     position: relative;
@@ -128,6 +129,7 @@ ol:not([class]) {
   display: flex;
   grid-gap: 5px;
   flex-direction: column;
+  margin: 10px 0;
 
   li {
     list-style: none;
