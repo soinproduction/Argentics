@@ -230,6 +230,7 @@ document.addEventListener("keydown", function (e) {
 
 // демо для показа.
 // для показа модалки после успешной отправки формы, нужно добавить класс active к блоку overlay
+
 const overlayOpen = document.querySelector("[data-open]");
 
 overlayOpen.onclick = showOverlay;

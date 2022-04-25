@@ -68,11 +68,90 @@ button {
 }
 
 ul,
+ol,
 li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
+a:not([class]) {
+  font-family: $font-family;
+  font-style: normal;
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: $text--w;
+  // text-decoration: underline;
+  line-height: 140%;
+  display: inline;
+}
+
+p:not([class]) {
+  font-family: $font-family;
+  font-style: normal;
+  font-size: clamp(16px, 1.5vw, 18px);
+  color: $text--e;
+  line-height: 140%;
+  display: inline;
+}
+
+
+
+ul:not([class]) {
+  list-style: disc;
+  display: flex;
+  grid-gap: 5px;
+  flex-direction: column;
+
+  li {
+    position: relative;
+    font-family: $font-family;
+    font-style: normal;
+    font-size: clamp(16px, 1.5vw, 18px);
+    color: $text--a;
+    line-height: 140%;
+
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      content: '';
+      border-radius: 50%;
+      background-color: $text--a;
+      display: inline-flex;
+      margin-right: 5px;
+    }
+  }
+}
+
+ol:not([class]) {
+  counter-reset: li;
+  display: flex;
+  grid-gap: 5px;
+  flex-direction: column;
+
+  li {
+    list-style: none;
+    list-style-position: outside;
+    font-family: $font-family;
+    font-style: normal;
+    font-size: clamp(16px, 1.5vw, 18px);
+    color: $text--a;
+    line-height: 140%;
+
+    &::before {
+      content: counter(li, decimal) " ";
+
+      margin-right: 5px;
+      margin-left: 0;
+      font-size: inherit;
+      color: $text--a;
+      counter-increment: li;
+    }
+  }
+}
+
+
+
 
 h1,
 h2,

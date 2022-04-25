@@ -22,11 +22,12 @@
     grid-gap: 20px;
     overflow: hidden;
     transition: max-height .7s;
-    max-height: calc(Min(18.889vw, 306px) * 3);
+    max-height: calc(Min(20.7vw, 306px) * 3);
     margin-bottom: clamp(30px, 3.75vw, 45px);
 
     img, picture {
       display: flex;
+      min-height: Min(19.167vw,290px);
     }
 
     @media screen and (max-width: 900px) {

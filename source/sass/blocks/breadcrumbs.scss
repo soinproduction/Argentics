@@ -2,10 +2,13 @@
   display: flex;
   grid-gap: 10px;
   flex-wrap: wrap;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #030915;
 
   &__item:not(:first-child) {
     padding-left: 10px;
     position: relative;
+
 
     &::before {
       content: '/';
@@ -17,6 +20,14 @@
       line-height: 100%;
       color: $text--a;
     }
+
+    max-width: 75%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: fit-content;
   }
 
   &__item:last-child {
@@ -30,5 +41,8 @@
     font-size: clamp(16px, 1.875vw,18px);
     line-height: 100%;
     color: $text--a;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
   }
 }
